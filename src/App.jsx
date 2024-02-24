@@ -1,34 +1,47 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
+  const [color, setColor] = useState("orange")
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="w-full h-screen duration-75"
+      style={{ backgroundColor: color }}
+    >
+      <div className="fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2" >
+        <div className="flex flex-wrap justify-center  px-2 gap-3 bg-slate-50 rounded-lg">
+          <button
+            onClick={() => { setColor("red") }}
+            className=" bg-red-600 px-3 py-2 mx-1 my-2 rounded-md text-white "
+          >Red</button>
+          <button
+            onClick={() => { setColor("green") }}
+            className=" bg-green-600 px-3 py-2 mx-1 my-2 rounded-md text-black "
+          >Green</button>
+          <button
+            onClick={() => { setColor("blue") }}
+            className=" bg-blue-600 px-3 py-2 mx-1 my-2 rounded-md text-black"
+          >Blue</button>
+          <button
+            onClick={() => { setColor("yellow") }}
+            className=" bg-yellow-600 px-3 py-2 mx-1 my-2 rounded-md text-black "
+          >Yellow</button>
+          <button
+            onClick={() => { setColor("pink") }}
+            className=" bg-pink-600 px-3 py-2 mx-1 my-2 rounded-md text-black "
+          >Pink</button>
+           <button
+            onClick={()=>{setColor("lime")}} 
+            className=" bg-lime-600 px-3 py-2 mx-1 my-2 rounded-md text-black " 
+             >Lime</button>
+              <button
+            onClick={()=>{setColor("Violet")}} 
+            className=" bg-violet-600 px-3 py-2 mx-1 my-2 rounded-md text-white " 
+             >Violet</button>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
+
   )
 }
 
