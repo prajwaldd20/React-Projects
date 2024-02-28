@@ -7,9 +7,9 @@ To get started with any project, simply navigate to its directory and follow the
 Projects Overview
 Here's a brief overview of the projects included:
 
-Project 1: 
-Project 2: Brief description.
-Project 3: Brief description.
+Project 1: Basic React Project
+Project 2: Background Changer 
+Project 3: Basic Password Generator
 
 Each project directory contains its own README file with more detailed information.
 
